@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InkRF | Projects</title>
+        <link rel="stylesheet" href="../../styles.css">
+        <meta charset="UTF-8">
+        <meta name="author" content="Justin Wolters">
+        <meta name="description" content="Home page for InkRF.net">
+    </head>
+
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="../../index.html">HOME</a></li>
+                    <li><a href="../../about.html">ABOUT</a></li>
+                    <li><a href="../../hobbies.html">HOBBIES/INTERESTS</a></li>
+                    <li><a href="/projects/">PROJECTS</a></li>
+                    <li><a href="../../contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <h1 class="name name-large">Justin Wolters - InkRF</h1>
+        </header>
+            
+        <section class="content-section container">
+            <h2 class="section-header">The SSTV Hard Hat (Ongoing)</h2>
+            <p>While attending my first DEF CON this year (2021), I discovered the world of the Hard Hat Brigade, a group of people who trick out hard hats to do a variety of things, such as wardriving, allowing to use it as a remote control car, and to look cool too. Owning a hard hat of my own that has not seen too much action other then protecting my head when pruning pear trees with fruit on them, I thought I would give a crack at making my own with a amateur radio twist!</p>
+            <p>My affinity for Slow Scan Television, more commonly referred to its initialism SSTV, was just the catalyst I needed to start making the SSTV Hard Hat! I would be able to walk around conventions/ham radio events wearing the hard hat while it listens into a predetermined frequency for people transmitting SSTV, and then display it on a the front of the hard hat.</p>
+            <p>(Hopefully soon) I plan on uploading my recipe here so the home viewer will be able to follow along at home. First I need to get the kinks all worked out, and then write it all up for your pleasure.</p>
+            <p>For the latest updates, keep an eye on my <a href="https://twitter.com/InkRF" target="_blank">Twitter profile</a> for the latest news on the SSTV Hard Hat!</p>
+        </section>
+
+        <section class="content-section container">
+            <h3 class="subsection-header">SSTV Hard Hat Mk.0</h3>
+            <p>Like any good designer, some requirements were layed out right off the bat, such as</p>
+            <ol>
+                <li>No permanent alterations to the hard hat (must retain its protective rating)</li>
+                <li>Must be self contained to the hard hat (with exception of wrist monitor)</li>
+                <li>When in use, must be enclosed network (no remote access, etc)</li>
+                <li>Must be able to view what is being received while wearing (via wrist monitor)</li>
+            </ol>
+            <img class="welcome-photo" src="Images/ExplodedView.jpg">
+            <p>Most of these requirements are for safety, whether that be from a physical or digital viewpoint. Walking around with a display on ones head is quite a daring move, which is why there is a requirement to always be able to view what is on the screen while wearing the hard hat, as well as the ability to stop/erase any received transmissions.</p>
+            <p>Design & production of Mk.0 begun at the start of September 2021 with a goal of completing a functioning version before GrrCON 10, my local infosec con scheduled for Sept. 16-17. I was lucky enough to get a hold of a Raspberry Pi 2b for free from a friend to do the computing necessary. I already had a RTL-SDR that could do the receiving, and some cheap LG tablet I had laying around for the display.</p>
+            <p>During the design stage, components were fastened to the hard hat using tape to get a general feel of the layout and how it would feel to wear. It was quickly discovered that my height while wearing the hard hat was aprox. 81", which is about 2 inches taller than a standard door clearance, so ducking under door frames is necessary when wearing the device.</p>
+            <p>From a software point of view, the Raspberry Pi is running Raspberry Pi OS, with rtl-sdr, sox, pulseaudio, qsstv, x11vnc, and ntpdate installed. After some fiddling around, I was able to received SSTV onto the pi, and via VNC view/display the received transmission on the tablet!</p>
+            <p>Currently Mk.0 is still in design and production. Now with the software side figured out, its time to design and make the mounting hardware for the various components. Thankfully the hardhat has two anchor points for a head lamp, one front and back, which will serve as points to mount the display and battery.</p>
+        </section>
+
+        <section class="content-section container">
+            <h3 class="subsection-header">SSTV Hard Hat Mk.1 and on</h3>
+            <p>Mk.1 of the SSTV hard hat is scheduled for release for DEF CON 30, giving 6 months between the Mk.0 release. Some planned features for Mk.1, as well as future versions include (subject to change):</p>
+            <ol>
+                <li>NES Power Glove-esque control panel</li>
+                <li>LED (or e-ink) display to display the frequency monitored</li>
+                <li>Automatic reporting/uploads of received transmission to Twitter</li>
+                <li>Bunch of LEDs for fun</li>
+                <li>The ability to transmit (with possible POV cam)</li>
+                <li>FSTV (fast scan television) version?</li>
+            </ol>
+        </section>
+        
+
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="name">Justin Wolters - InkRF</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://twitter.com/InkRF" target="_blank">
+                            <img src="../../Images/Twitter Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCntQyJ6_46XSnWBgLO8RTYw"  target="_blank">
+                            <img src="../../Images/YouTube Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/InkRF" target="_blank">
+                            <img src="../../Images/Github Logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container ">
+                <p>Copyright © Justin Wolters 2021</p>
+            </div>
+        </footer>
+    </body>
+</html>

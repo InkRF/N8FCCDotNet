@@ -82,6 +82,14 @@ html, body{
     font-size: 2.5em;
 }
 
+.subsection-header{
+    font-family: "Vollkorn";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2em;
+}
+
 .welcome-photo{
     float: right;
     height: 375px;
